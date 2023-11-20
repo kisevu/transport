@@ -1,0 +1,12 @@
+server:
+  port: 7556
+spring:
+  application:
+    name: User
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      key-serializer:  org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      group-id: user-group
+      auto-offset-reset: earliest
